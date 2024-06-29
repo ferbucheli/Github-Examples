@@ -12,3 +12,7 @@ jobs:
           echo "Msg 1"
           echo "Msg 2"
           echo "::endgroup::"
+      - name: "Step 1"
+        run: echo "ACTION_VAR=prod" >> $GITHUB_ENV
+      - name: "Step 2"
+        run: echo $ACTION_VAR
