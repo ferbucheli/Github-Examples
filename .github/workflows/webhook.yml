@@ -12,6 +12,4 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Display Event Data
-        run: |
-          echo "Full event data: ${{ toJson(github.event) }}"
-          echo "Event type: ${{ github.event.action }}"
+        run: 'echo "Event of type: $GITHUB_EVENT_NAME"'
